@@ -1,0 +1,30 @@
+# Unity 缓存/临时文件
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]serData/
+
+# 个人配置文件
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.boo
+*.boo.meta
+*.svd
+*.dll
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity 编辑器缓存
+/[Uu]nityGenerated/
+/[Ss]ettings/[Cc]ache/

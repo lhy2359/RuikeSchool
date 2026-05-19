@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lombardy\\ruike\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E74E742-E59D-E492-FCA6-04482835024A}|Assembly-CSharp.csproj|c:\\users\\lombardy\\ruike\\assets\\\u63A7\u5236\u76F8\u5173\u811A\u672C\\\u73A9\u5BB6\u63A7\u5236\u76F8\u5173\u811A\u672C\\playerstatussystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E74E742-E59D-E492-FCA6-04482835024A}|Assembly-CSharp.csproj|solutionrelative:assets\\\u63A7\u5236\u76F8\u5173\u811A\u672C\\\u73A9\u5BB6\u63A7\u5236\u76F8\u5173\u811A\u672C\\playerstatussystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerStatusSystem.cs",
+              "DocumentMoniker": "C:\\Users\\Lombardy\\ruike\\Assets\\\u63A7\u5236\u76F8\u5173\u811A\u672C\\\u73A9\u5BB6\u63A7\u5236\u76F8\u5173\u811A\u672C\\PlayerStatusSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\\u63A7\u5236\u76F8\u5173\u811A\u672C\\\u73A9\u5BB6\u63A7\u5236\u76F8\u5173\u811A\u672C\\PlayerStatusSystem.cs",
+              "ToolTip": "C:\\Users\\Lombardy\\ruike\\Assets\\\u63A7\u5236\u76F8\u5173\u811A\u672C\\\u73A9\u5BB6\u63A7\u5236\u76F8\u5173\u811A\u672C\\PlayerStatusSystem.cs",
+              "RelativeToolTip": "Assets\\\u63A7\u5236\u76F8\u5173\u811A\u672C\\\u73A9\u5BB6\u63A7\u5236\u76F8\u5173\u811A\u672C\\PlayerStatusSystem.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAADwv6gAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T14:59:13.531Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

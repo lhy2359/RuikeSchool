@@ -1,0 +1,1068 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd93ff5b2c9fc04e847082f3a9dcdb9, type: 3}
+  m_Name: "\u836F\u54C1\u603B\u914D\u7F6E"
+  m_EditorClassIdentifier: 
+  MedicineDataList:
+  - PropId: Medicine_HealingPotionI
+    PropName: "\u6062\u590D\u5242\u2160 "
+    ProfessionType: 4
+    Icon: {fileID: 21300000, guid: 53e13a74d5379134e819f35dbfae6c89, type: 3}
+    Description: "\u6062\u590D10%\u7A33\u5B9A\u5EA6 "
+    SalePrice: 60
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 1
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 1
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 10
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 1
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_HealingPotionII
+    PropName: "\u6062\u590D\u5242\u2160I"
+    ProfessionType: 0
+    Icon: {fileID: 21300000, guid: 7863eea6f20423540bd68652af7c675b, type: 3}
+    Description: "\u6062\u590D40%\u7A33\u5B9A\u5EA6 "
+    SalePrice: 180
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 1
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 1
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 40
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 2
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_HealingPotionMax
+    PropName: "\u6062\u590D\u5242Max"
+    ProfessionType: 0
+    Icon: {fileID: 21300000, guid: f4f8fd16aa6328f49a6f018e65e1824e, type: 3}
+    Description: "\u6062\u590D100%\u7A33\u5B9A\u5EA6\u4E14\u79FB\u9664\u6240\u6709\u8D1F\u9762\u6548\u679C"
+    SalePrice: 400
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 1
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 1
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 100
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 7
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 3
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_WindPotionI
+    PropName: "\u98CE\u4E4B\u836F\u5242I"
+    ProfessionType: 0
+    Icon: {fileID: 21300000, guid: 62e29dfa5294b634097a220658e54ff3, type: 3}
+    Description: "\u79FB\u52A8\u901F\u5EA6+\u57FA\u7840\u503C20%\uFF0C\u6301\u7EED30s "
+    SalePrice: 40
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 6
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 1
+              EffectDuration: 30
+              ModifyConfig:
+                ModifyType: 3
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0.2
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 1
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_WindPotionII
+    PropName: "\u98CE\u4E4B\u836F\u5242II"
+    ProfessionType: 0
+    Icon: {fileID: 21300000, guid: c025aad53033c664fbaa5d537c159676, type: 3}
+    Description: "\u79FB\u52A8\u901F\u5EA6+\u57FA\u7840\u503C40%\uFF0C\u6301\u7EED30s"
+    SalePrice: 80
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 6
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 1
+              EffectDuration: 30
+              ModifyConfig:
+                ModifyType: 3
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0.4
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 2
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_WindPotionMax
+    PropName: "\u98CE\u4E4B\u836F\u5242Max"
+    ProfessionType: 0
+    Icon: {fileID: 21300000, guid: 11bebb355b3db6346b22b86c412c8763, type: 3}
+    Description: "\u79FB\u52A8\u901F\u5EA6+\u57FA\u7840\u503C100%\uFF0C\u6301\u7EED30s\uFF0C\u4F46\u98CE\u4F1A\u5E26\u6765\u60EF\u6027 "
+    SalePrice: 150
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 6
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 1
+              EffectDuration: 30
+              ModifyConfig:
+                ModifyType: 3
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 1
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 7
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 3
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            BoundaryOverrideParameter:
+              Type: 3
+              EffectTimeType: 1
+              EffectDuration: 30
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 3
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_HawkeyePotionI
+    PropName: "\u9E70\u773C\u836F\u5242\u2160"
+    ProfessionType: 0
+    Icon: {fileID: 21300000, guid: 6e5ed51c6c6590046a646a9c76ef9f67, type: 3}
+    Description: "\u83B7\u5F972\u4E2A\u5355\u4F4D\u89C6\u91CE\uFF081.5r\uFF09\uFF0C\u6301\u7EED30s"
+    SalePrice: 40
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 5
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 1
+              EffectDuration: 30
+              ModifyConfig:
+                ModifyType: 3
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0.5
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 1
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_HawkeyePotionII
+    PropName: "\u9E70\u773C\u836F\u5242\u2160I"
+    ProfessionType: 0
+    Icon: {fileID: 21300000, guid: 92d87d96989b60f4db67d47b67105a7c, type: 3}
+    Description: "\u83B7\u5F974\u4E2A\u5355\u4F4D\u89C6\u91CE\uFF082r\uFF09\uFF0C\u6301\u7EED30s "
+    SalePrice: 80
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 5
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 1
+              EffectDuration: 30
+              ModifyConfig:
+                ModifyType: 3
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 1.5
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 2
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_HawkeyePotionMax
+    PropName: "\u9E70\u773C\u836F\u5242Max"
+    ProfessionType: 0
+    Icon: {fileID: 21300000, guid: 6a59f73003d678748bc4414e01febe44, type: 3}
+    Description: "\u83B7\u5F979\u4E2A\u5355\u4F4D\u89C6\u91CE\uFF083r\uFF09\uFF0C\u6301\u7EED60s"
+    SalePrice: 150
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 5
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 1
+              EffectDuration: 60
+              ModifyConfig:
+                ModifyType: 3
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 2.5
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 3
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_Augmentant
+    PropName: "\u5F3A\u5316\u5242"
+    ProfessionType: 0
+    Icon: {fileID: 21300000, guid: 3b9d2cd616c535e45aa7dbc3f556001e, type: 3}
+    Description: "\u4F7F\u7528\u540E60\u79D2\u5185\uFF0C\u7A33\u5B9A\u5EA6\u81EA\u7136\u8870\u51CF\u901F\u5EA6+100%\uFF0C\u4F46\u79FB\u901F+40%"
+    SalePrice: 20
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 3
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 2
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 1
+              EffectDuration: 60
+              ModifyConfig:
+                ModifyType: 3
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 1
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 6
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 1
+              EffectDuration: 60
+              ModifyConfig:
+                ModifyType: 3
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0.4
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 0
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_XRayPotion
+    PropName: "\u900F\u89C6\u836F\u6C34"
+    ProfessionType: 0
+    Icon: {fileID: 21300000, guid: b8c5727863d3d6b44a5d9f1c1bdd5a66, type: 3}
+    Description: "\u83B7\u5F97\u201C\u900F\u89C6\u89C6\u91CE\u201D\uFF0C\u6301\u7EED30s"
+    SalePrice: 80
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 1
+          PlayerEffect: 0
+          CameraEffect: 3
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 1
+              EffectDuration: 60
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 0
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_LuckPotion
+    PropName: "\u5E78\u8FD0\u836F\u6C34"
+    ProfessionType: 0
+    Icon: {fileID: 21300000, guid: b63c05fc46d8ece49962df4ea4f07d8f, type: 3}
+    Description: 
+    SalePrice: 100
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 4
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 2
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 1
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 1
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 0
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0
+  - PropId: Medicine_BloodBag
+    PropName: "\u8840\u888B"
+    ProfessionType: 4
+    Icon: {fileID: 21300000, guid: 5411a048553ea9a478a02030ed8748c5, type: 3}
+    Description: "\u4F7F\u7528\u540E\u6062\u590D25%\u7A33\u5B9A\u6027\u3002\u8840\u888B\u53EF\u51FA\u552E\uFF08\u53EA\u80FD\u5728\u5546\u5E97\u51FA\u552E\u4E0D\u80FD\u8D2D\u4E70\uFF0C\u4EF7\u683C\u4E3A50\u91D1\u5E01\uFF09"
+    SalePrice: 0
+    EffectEvents:
+    - HappenProbability: 1
+      M: 1
+      N: 1
+      EffectUnitsList:
+      - EffectUnits:
+        - OccurrenceCount: 1
+          Target: 0
+          PlayerEffect: 1
+          CameraEffect: 0
+          MapEffect: 0
+          FacilityEffect: 0
+          PropEffect: 0
+          LevelEffect: 0
+          Polarity: 1
+          PlayerParameters:
+            AttributeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 1
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 25
+            BoundaryOverrideParameter:
+              Type: 0
+              EffectTimeType: 0
+              EffectDuration: 0
+            ConsumeGoldAmount: 0
+          CameraParameters:
+            CameraViewSizeParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            XRayParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+          MapParameters:
+            PlaceStructureId: 
+          FacilityParameters:
+            RewardConfig: []
+            UpgradeConfig: []
+            ReceivedRewardFacility: 0
+          PropParameters:
+            ChangeRemainingUsesParameter:
+              EffectTimeType: 0
+              EffectDuration: 0
+              ModifyConfig:
+                ModifyType: 0
+                IsSetOnlyIfSmaller: 0
+                IsBasedOnCurrentValue: 0
+                Value: 0
+            SpawnPropId: 
+          LevelParameters:
+            TEST: 0
+    Level: 0
+    IsOnlySaleableAndOnlyDoctor: 1
+    OnlySellPrice: 50
+  - PropId: NULL
+    PropName: 
+    ProfessionType: 0
+    Icon: {fileID: 0}
+    Description: 
+    SalePrice: 0
+    EffectEvents: []
+    Level: 0
+    IsOnlySaleableAndOnlyDoctor: 0
+    OnlySellPrice: 0

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73028ff40173e34482fc45539f3537c, type: 3}
+  m_Name: "\u73A9\u5BB6\u78B0\u649E\u68C0\u6D4B\u6570\u636E\u914D\u7F6E"
+  m_EditorClassIdentifier: 
+  playerColliderHalfWidth: 0.25
+  playerColliderHeight: 0.9
+  playerColliderHalfHeight: 0.45

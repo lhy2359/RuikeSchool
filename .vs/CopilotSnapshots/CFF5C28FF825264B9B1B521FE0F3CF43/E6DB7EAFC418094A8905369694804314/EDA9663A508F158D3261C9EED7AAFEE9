@@ -1,0 +1,184 @@
+﻿//using UnityEngine;
+//using UnityEngine.Tilemaps;
+//using System.Collections;
+
+//public class Portal : MonoBehaviour
+//{
+//    [Header("传送核心设置")]
+//    public Transform targetSpawnPoint; // 目标出生点
+//    public Tilemap targetAirwall;      // 目标地图空气墙
+//    public float fadeTime = 0.5f;      // 淡入淡出时长
+
+//    private bool isTeleporting = false; // 防重复传送锁
+
+//    [Header("环境设置")]
+//    public Color targetCameraColor = new Color(0.1f, 0.1f, 0.15f); // 室内暗蓝色，室外用默认浅灰
+
+//    [Header("相机设置")]
+//    public float targetCameraSize = 4f; // 室内用4，室外用默认值
+
+//    void OnTriggerEnter2D(Collider2D other)
+//    {
+//        // 只对玩家触发，且不在传送中
+//        if (other.CompareTag("Player") && !isTeleporting)
+//        {
+//            StartCoroutine(TeleportSequence(other.transform));
+//        }
+//    }
+
+//    // 完整传送动画流程协程
+//    IEnumerator TeleportSequence(Transform player)
+//    {
+//        isTeleporting = true;
+//        PlayerController playerCtrl = player.GetComponent<PlayerController>();
+//        Animator playerAnim = player.GetComponent<Animator>();
+
+//        // 【新增】先停住玩家动画，归零输入
+//        if (playerCtrl != null)
+//        {
+//            playerCtrl.canMove = false;
+//            playerAnim.SetBool("IsMoving", false);
+//            playerAnim.SetFloat("MoveX", 0);
+//            playerAnim.SetFloat("MoveY", 0);
+//        }
+
+//        // 【新增】给1帧的反应时间，再开始淡入
+//        yield return null;
+
+//        // 2. 屏幕淡入到黑屏
+//        yield return StartCoroutine(UIManager.Instance.FadeIn(fadeTime));
+
+//        // 3. 黑屏时执行传送
+//        player.position = targetSpawnPoint.position;
+//        if (playerCtrl != null && targetAirwall != null)
+//        {
+//            playerCtrl.UpdateMapBounds(targetAirwall);
+//            playerCtrl.SetCameraBackgroundColor(targetCameraColor);
+//            playerCtrl.SetCameraOrthoSize(targetCameraSize);
+//        }
+
+//        // 【新增】给2帧时间，确保场景、相机、边界全部更新完成
+//        yield return new WaitForSeconds(0.1f);
+
+//        // 5. 屏幕淡出，恢复画面
+//        yield return StartCoroutine(UIManager.Instance.FadeOut(fadeTime));
+
+//        // 6. 恢复玩家移动
+//        if (playerCtrl != null) playerCtrl.canMove = true;
+
+//        isTeleporting = false;
+//    }
+//}
+using UnityEngine;
+using UnityEngine.Tilemaps;
+using System.Collections;
+
+// 传送门类型：进入图书馆/离开图书馆
+public enum PortalType
+{
+    EnterLibrary, // 室外→室内
+    ExitLibrary   // 室内→室外
+}
+
+public class Portal : MonoBehaviour
+{
+    [Header("传送核心设置")]
+    public PortalType portalType; // 选择这个传送门是进入还是离开
+    public Transform targetSpawnPoint;
+    public Tilemap targetAirwall;
+    public float fadeTime = 0.5f;
+
+    [Header("环境设置")]
+    public Color targetCameraColor = new Color(0.1f, 0.1f, 0.15f);
+    public float targetCameraSize = 4f;
+
+    private bool isTeleporting = false;
+    private bool isPanelShowing = false; // 防止重复弹出弹窗
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // 只对玩家触发，且不在传送中、不在弹窗中
+        if (other.CompareTag("Player") && !isTeleporting && !isPanelShowing)
+        {
+            PlayerController playerCtrl = other.GetComponent<PlayerController>();
+            // 弹出弹窗时，先禁用玩家移动，防止走开
+            if (playerCtrl != null) playerCtrl.canMove = false;
+            isPanelShowing = true;
+
+            // 根据传送门类型，显示不同的弹窗文本
+            string message = portalType switch
+            {
+                PortalType.EnterLibrary => "请问要进入图书馆吗？",
+                PortalType.ExitLibrary => "请问要离开图书馆，回到室外吗？",
+                _ => "是否执行传送？"
+            };
+
+            // 显示确认弹窗
+            UIManager.Instance.ShowConfirmPanel(
+                message,
+                // 点「是」：执行传送
+                () => StartCoroutine(TeleportSequence(other.transform)),
+                // 点「否」：恢复移动，重置状态
+                () =>
+                {
+                    if (playerCtrl != null) playerCtrl.canMove = true;
+                    isPanelShowing = false;
+                }
+            );
+        }
+    }
+
+    // 玩家离开触发区时，重置状态，防止弹窗卡住
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerController playerCtrl = other.GetComponent<PlayerController>();
+            // 玩家走开了，关闭弹窗，恢复移动
+            UIManager.Instance?.CloseConfirmPanel();
+            if (playerCtrl != null) playerCtrl.canMove = true;
+            isPanelShowing = false;
+        }
+    }
+
+    // 完整传送动画流程
+    IEnumerator TeleportSequence(Transform player)
+    {
+        isTeleporting = true;
+        PlayerController playerCtrl = player.GetComponent<PlayerController>();
+        Animator playerAnim = player.GetComponent<Animator>();
+
+        // 停住玩家动画
+        if (playerAnim != null)
+        {
+            playerAnim.SetBool("IsMoving", false);
+            playerAnim.SetFloat("MoveX", 0);
+            playerAnim.SetFloat("MoveY", 0);
+        }
+
+        yield return null;
+
+        // 屏幕淡入到黑屏
+        yield return StartCoroutine(UIManager.Instance.FadeIn(fadeTime));
+
+        // 黑屏时执行传送+更新所有设置
+        player.position = targetSpawnPoint.position;
+        if (playerCtrl != null && targetAirwall != null)
+        {
+            playerCtrl.UpdateMapBounds(targetAirwall);
+            playerCtrl.SetCameraBackgroundColor(targetCameraColor);
+            playerCtrl.SetCameraOrthoSize(targetCameraSize);
+        }
+
+        // 等待场景更新完成
+        yield return new WaitForSeconds(0.1f);
+
+        // 屏幕淡出，恢复画面
+        yield return StartCoroutine(UIManager.Instance.FadeOut(fadeTime));
+
+        // 恢复玩家移动，重置所有状态
+        if (playerCtrl != null) playerCtrl.canMove = true;
+        isTeleporting = false;
+        isPanelShowing = false;
+    }
+}
