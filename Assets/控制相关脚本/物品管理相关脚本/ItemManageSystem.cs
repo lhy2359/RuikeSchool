@@ -125,9 +125,16 @@ public class ItemManageSystem : MonoBehaviour
             Debug.Log("物品为空或者物品使用次数为0！");
             return;
         }
+        ExecuteItemEffect(item);
         item.SetRemainingUses(item.RemainingUses - 1);
         SetLastUsedItem(item);
         OnItemDataUpdated?.Invoke();
+    }
+
+    // 统一分发物品效果 → 调用对应功能系统
+    private void ExecuteItemEffect(RuntimeItemData item)
+    {
+
     }
 
     public void UseQuickBarItem(int quickIndex)
