@@ -29,11 +29,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AspectRatio: 1.4698056
+    - _AspectRatio: 1.8421053
     - _CameraHalfHeight: 5
     - _EdgeSoftness: 0.02
     - _ViewRadius: 3
     m_Colors:
-    - _MaskColor: {r: 0, g: 0, b: 0, a: 0}
-    - _PlayerWorldPos: {r: 46.98001, g: 50.779984, b: 0, a: 0}
+    - _MaskColor: {r: 0, g: 0, b: 0, a: 1}
+    - _PlayerWorldPos: {r: 56.26499, g: 49.91242, b: 0, a: 0}
   m_BuildTextureStacks: []

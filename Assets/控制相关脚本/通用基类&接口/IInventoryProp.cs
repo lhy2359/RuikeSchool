@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// 背包所有物品通用基础接口（重命名后）
+/// 背包所有物品通用基础接口
 /// </summary>
 public interface IInventoryProp
 {
