@@ -239,6 +239,9 @@ public class PlayerControlSystem : MonoBehaviour
     // 根据传送目标点，找到对应房间的空气墙并更新边界
     public void UpdateMapBoundsByTargetPoint(Vector3 targetPoint)
     {
+        // 【新增Debug】打印传入的目标点
+        Debug.Log($"【传送调试】开始更新边界，目标点坐标：{targetPoint}");
+
         Transform airwallParent = GameObject.Find("Airwall")?.transform;
         if (airwallParent == null)
         {
@@ -258,13 +261,33 @@ public class PlayerControlSystem : MonoBehaviour
         else
         {
             Debug.Log($"【玩家】Airwall根节点无Tilemap，遍历子物体查找");
+            // 遍历所有激活的Tilemap，找到包含目标点的那个，而不是取第一个
             foreach (Transform child in airwallParent.transform)
             {
-                if (!child.gameObject.activeSelf) continue;
+                if (!child.gameObject.activeSelf)
+                {
+                    Debug.Log($"【传送调试】子物体{child.name}未激活，跳过");
+                    continue;
+                }
+
                 Tilemap tilemap = child.GetComponent<Tilemap>();
-                if (tilemap != null)
+                if (tilemap == null)
+                {
+                    Debug.Log($"【传送调试】子物体{child.name}不是Tilemap，跳过");
+                    continue;
+                }
+
+                // 计算当前Tilemap的世界边界
+                tilemap.CompressBounds();
+                Bounds bound = tilemap.localBounds;
+                bound.min = tilemap.transform.TransformPoint(bound.min);
+                bound.max = tilemap.transform.TransformPoint(bound.max);
+
+                // 找到包含目标点的Tilemap，直接跳出循环
+                if (bound.Contains(targetPoint))
                 {
                     targetTilemap = tilemap;
+                    Debug.Log($"【传送调试】找到匹配的Tilemap：{child.name}");
                     break;
                 }
             }
@@ -293,7 +316,7 @@ public class PlayerControlSystem : MonoBehaviour
             _mapBounds.max = roomBounds.max - _cellSize;
 
             // 打印新地图边界
-            Debug.Log($"【✅ 目标点匹配成功】地图边界更新完成");
+            Debug.Log($"【目标点匹配成功】地图边界更新完成");
             Debug.Log($"【新地图边界】左：{_mapBounds.min.x:F2} | 右：{_mapBounds.max.x:F2} | 下：{_mapBounds.min.y:F2} | 上：{_mapBounds.max.y:F2}");
 
             // 更新相机边界
@@ -303,7 +326,7 @@ public class PlayerControlSystem : MonoBehaviour
         else
         {
             Debug.LogError("【玩家】目标点不在当前地图范围内！");
+            Debug.LogError($"目标点：{targetPoint} | roomBounds：Min({roomBounds.min}, {roomBounds.max})");
         }
     }
-
 }
