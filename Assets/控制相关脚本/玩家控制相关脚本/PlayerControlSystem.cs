@@ -239,7 +239,6 @@ public class PlayerControlSystem : MonoBehaviour
     // 根据传送目标点，找到对应房间的空气墙并更新边界
     public void UpdateMapBoundsByTargetPoint(Vector3 targetPoint)
     {
-        // 【新增Debug】打印传入的目标点
         Debug.Log($"【传送调试】开始更新边界，目标点坐标：{targetPoint}");
 
         Transform airwallParent = GameObject.Find("Airwall")?.transform;
