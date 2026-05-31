@@ -282,6 +282,9 @@ public class PlayerControlSystem : MonoBehaviour
                 bound.min = tilemap.transform.TransformPoint(bound.min);
                 bound.max = tilemap.transform.TransformPoint(bound.max);
 
+                Debug.Log($"【传送调试】检查Tilemap[{child.name}]：世界边界Min({bound.min.x:F2}, {bound.min.y:F2}) Max({bound.max.x:F2}, {bound.max.y:F2})");
+                Debug.Log($"【传送调试】目标点是否在该Tilemap内：{bound.Contains(targetPoint)}");
+
                 // 找到包含目标点的Tilemap，直接跳出循环
                 if (bound.Contains(targetPoint))
                 {
