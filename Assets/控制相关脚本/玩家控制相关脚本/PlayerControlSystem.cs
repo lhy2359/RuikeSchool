@@ -319,7 +319,7 @@ public class PlayerControlSystem : MonoBehaviour
             _mapBounds.max = roomBounds.max - _cellSize;
 
             // 打印新地图边界
-            Debug.Log($"【✅ 目标点匹配成功】地图边界更新完成");
+            Debug.Log($"【目标点匹配成功】地图边界更新完成");
             Debug.Log($"【新地图边界】左：{_mapBounds.min.x:F2} | 右：{_mapBounds.max.x:F2} | 下：{_mapBounds.min.y:F2} | 上：{_mapBounds.max.y:F2}");
 
             // 更新相机边界
@@ -332,5 +332,4 @@ public class PlayerControlSystem : MonoBehaviour
             Debug.LogError($"目标点：{targetPoint} | roomBounds：Min({roomBounds.min}, {roomBounds.max})");
         }
     }
-
 }

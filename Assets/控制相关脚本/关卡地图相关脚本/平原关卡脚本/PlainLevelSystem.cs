@@ -224,7 +224,7 @@ public class PlainLevelSystem : MonoBehaviour
         DestinationMarkGenerator destinationGenerator = new DestinationMarkGenerator(
             targetScene,
             "DestinationMarkPoint",
-            Resources.Load<GameObject>("UIPrefabs/Destination")
+            Resources.Load<GameObject>("MarkPositionPrefabs/Destination")
         );
         destinationGenerator.GenerateAndRecord(1);
 
@@ -232,14 +232,14 @@ public class PlainLevelSystem : MonoBehaviour
         NormalChestMarkGenerator normalChestGenerator = new NormalChestMarkGenerator(
             targetScene,
             "NormalAndPurpleChestMarkPoint",
-            Resources.Load<GameObject>("UIPrefabs/NormalChest")
+            Resources.Load<GameObject>("MarkPositionPrefabs/NormalChest")
         );
         normalChestGenerator.GenerateAndRecord(NormalChestCount);
 
         PurpleChestMarkGenerator purpleChestGenerator = new PurpleChestMarkGenerator(
             targetScene,
             "NormalAndPurpleChestMarkPoint",
-            Resources.Load<GameObject>("UIPrefabs/PurpleChest")
+            Resources.Load<GameObject>("MarkPositionPrefabs/PurpleChest")
         );
         purpleChestGenerator.GenerateAndRecord(PurpleChestCount);
 
@@ -247,7 +247,7 @@ public class PlainLevelSystem : MonoBehaviour
         GoldenChestMarkGenerator goldenChestGenerator = new GoldenChestMarkGenerator(
             targetScene,
             "FinisAsymmetricAndGoldChestMarkPoint",
-            Resources.Load<GameObject>("UIPrefabs/GoldenChest")
+            Resources.Load<GameObject>("MarkPositionPrefabs/GoldenChest")
         );
         goldenChestGenerator.GenerateAndRecord(GoldenChestCount);
 
@@ -255,14 +255,14 @@ public class PlainLevelSystem : MonoBehaviour
         NormalVendingMachineMarkGenerator normalVendingGenerator = new NormalVendingMachineMarkGenerator(
             targetScene,
             "VendingMachineMarkPoint",
-            Resources.Load<GameObject>("UIPrefabs/NormalVendingMachine")
+            Resources.Load<GameObject>("MarkPositionPrefabs/NormalVendingMachine")
         );
         normalVendingGenerator.GenerateAndRecord(NormalVendingMachineCount);
 
         BrokenVendingMachineMarkGenerator brokenVendingGenerator = new BrokenVendingMachineMarkGenerator(
             targetScene,
             "VendingMachineMarkPoint", 
-            Resources.Load<GameObject>("UIPrefabs/BrokenVendingMachine")
+            Resources.Load<GameObject>("MarkPositionPrefabs/BrokenVendingMachine")
         );
         brokenVendingGenerator.GenerateAndRecord(BrokenVendingMachineCount);
 
@@ -270,21 +270,21 @@ public class PlainLevelSystem : MonoBehaviour
         StoreMarkGenerator storeGenerator = new StoreMarkGenerator(
             targetScene,
             "ShopMarkPoint",
-            Resources.Load<GameObject>("UIPrefabs/Store")
+            Resources.Load<GameObject>("MarkPositionPrefabs/Store")
         );
         storeGenerator.GenerateAndRecord(StoreCount);
 
         RepairShopMarkGenerator repairShopGenerator = new RepairShopMarkGenerator(
             targetScene,
             "ShopMarkPoint",
-            Resources.Load<GameObject>("UIPrefabs/RepairShop")
+            Resources.Load<GameObject>("MarkPositionPrefabs/RepairShop")
         );
         repairShopGenerator.GenerateAndRecord(RepairShopCount);
 
         PharmacyMarkGenerator pharmacyGenerator = new PharmacyMarkGenerator(
             targetScene,
             "ShopMarkPoint",
-            Resources.Load<GameObject>("UIPrefabs/Pharmacy")
+            Resources.Load<GameObject>("MarkPositionPrefabs/Pharmacy")
         );
         pharmacyGenerator.GenerateAndRecord(PharmacyShopCount);
 

@@ -301,6 +301,7 @@ MonoBehaviour:
   smoothSpeed: 5
   defaultCameraViewSize: 5
   _freeCameraSpeed: 12
+  _edgeScrollWidth: 20
 --- !u!114 &132001101
 MonoBehaviour:
   m_ObjectHideFlags: 0
